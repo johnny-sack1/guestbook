@@ -12,7 +12,7 @@ public class SQLiteJDBC {
         Connection c;
         try {
             Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:guestbook.db");
+            c = DriverManager.getConnection("jdbc:sqlite:/home/jonatan/codecool/module3/SI3/guestbook/guestbook.db");
             connection = c;
             System.out.println("success");
         } catch (Exception e) {
@@ -22,7 +22,7 @@ public class SQLiteJDBC {
         }
     }
 
-    Connection getConnection() {
+    public Connection getConnection() {
         return connection;
     }
 }
