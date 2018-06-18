@@ -10,6 +10,7 @@ public class Server {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
         server.createContext("/guestbook", new Guestbook());
+        server.createContext("/login", new Login());
         server.setExecutor(null);
 
         server.start();
